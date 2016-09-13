@@ -12,6 +12,9 @@ fi
 
 # Customize to your needs...
 
+# iTerm2 Integration
+source /Users/chris/.iterm2_shell_integration.zsh
+
 # Common paths
 School=~/Dropbox/School
 Code=~/Code
