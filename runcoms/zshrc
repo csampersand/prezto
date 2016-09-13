@@ -17,10 +17,8 @@ School=~/Dropbox/School
 Code=~/Code
 
 # Config Files
-alias zshconfig="st ~/.zshrc"
-alias ohmyzsh="st ~/.oh-my-zsh"
-alias shortcuts="st ~/.oh-my-zsh/custom/shortcuts.zsh"
-alias vimconfig="st ~/.stc"
+alias zshconfig="$EDITOR ~/.zshrc"
+alias vimconfig="$EDITOR ~/.stc"
 
 # Vagrant Functions
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
