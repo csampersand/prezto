@@ -37,8 +37,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'fasd' \
   'node' \
-  'osx' \
-  'ssh'
+  'osx'
 
 #
 # Autosuggestions
