@@ -23,8 +23,7 @@ function prompt_chris_setup {
     'rprompt' '%C%D'
 
   # Define prompts.
-  # %(?.%F{green}${1:-☻ }%f.%F{red}${1:-☻ }%f) "
-  PROMPT='%F{green}➜  %F{magenta}%n@%m %B%F{cyan}%1~%b%f${(e)git_info[prompt]} %f'
+  PROMPT='%(?.%F{green}.%F{red})➜%f  %F{magenta}%n@%m %B%F{cyan}%1~%b%f${(e)git_info[prompt]}%f '
   RPROMPT=''
 }
 
