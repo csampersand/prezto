@@ -12,8 +12,6 @@ fi
 
 # Customize to your needs...
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin"
-
 # Common paths
 School=~/Dropbox/School
 Code=~/Code
@@ -45,6 +43,7 @@ function lanip() {
 alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias copyip="myip | tr -d '\n' | pbcopy"
 
+# Misc aliases and functions
 alias cask='brew cask'
 function anybar { echo -n $1 | nc -4u -w0 localhost ${2:-1738}; }
 function gpp { outfile=$(basename $1 '.cpp'); g++ -o $outfile $1 -std=c++11 && { trap "rm $outfile; unset out" SIGINT EXIT; ./$outfile } }
@@ -53,4 +52,5 @@ alias zf='fasd -e open'
 alias ql='quick-look'
 alias pjs='phantomjs'
 alias tower='gittower'
+alias st='subl'
 function z { cd $(fasd $1) }
