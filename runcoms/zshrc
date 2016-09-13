@@ -53,3 +53,4 @@ alias zf='fasd -e open'
 alias ql='quick-look'
 alias pjs='phantomjs'
 alias tower='gittower'
+function z { cd $(fasd $1) }
