@@ -53,7 +53,7 @@ alias zf='fasd -e open'
 alias ql='quick-look'
 alias pjs='phantomjs'
 alias tower='gittower'
-alias st='subl'
+alias st='subl -n'
 function z { cd $(fasd $1) }
 
 # Git aliases
