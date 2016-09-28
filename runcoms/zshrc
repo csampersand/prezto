@@ -61,7 +61,7 @@ alias gst='git status'
 alias gc='git commit'
 alias ga='git add'
 alias gco='git checkout'
-alias gcm='git checkout master'alias gcm='git checkout master'
+alias gcm='git checkout master'
 
 # Keybinds for end of line & beginning of line
 bindkey '^a' beginning-of-line
