@@ -61,4 +61,24 @@ alias gst='git status'
 alias gc='git commit'
 alias ga='git add'
 alias gco='git checkout'
-alias gcm='git checkout master'
+alias gcm='git checkout master'alias gcm='git checkout master'
+
+# Keybinds for end of line & beginning of line
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+
+# Keybind for search backwards incrementally
+bindkey '^r' history-incremental-search-backward
+bindkey -M isearch '^R' history-incremental-search-backward
+bindkey -M isearch '^S' history-incremental-search-forward
+
+# Function to insert "sudo " at the beginning of the line
+function prepend-sudo {
+  if [[ $BUFFER != "sudo "* ]]; then
+    BUFFER="sudo $BUFFER"; CURSOR+=5
+  fi
+}
+zle -N prepend-sudo
+
+# Keybind '<esc> <esc>' to prepend sudo
+bindkey '\e\e' prepend-sudo
