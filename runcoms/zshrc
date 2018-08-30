@@ -27,9 +27,6 @@ alias vimconfig="$EDITOR ~/.stc"
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias stm='function __stm() { (cd ~/Code/stm_dev && vagrant $*); unset -f __stm; }; __stm'
 
-# Update oh-my-zsh
-alias zupdate='upgrade_oh_my_zsh'
-
 # Reload .zshrc
 alias zreload="source ~/.zshrc"
 
@@ -54,14 +51,9 @@ alias ql='quick-look'
 alias pjs='phantomjs'
 alias tower='gittower'
 alias st='subl -n'
-function z { cd $(fasd $1) }
 
-# Git aliases
-alias gst='git status'
-alias gc='git commit'
-alias ga='git add'
-alias gco='git checkout'
-alias gcm='git checkout master'
+# Enable fasd functions
+eval "$(fasd --init auto)"
 
 # Keybinds for end of line & beginning of line
 bindkey '^a' beginning-of-line
