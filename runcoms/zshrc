@@ -26,6 +26,7 @@ alias vimconfig="$EDITOR ~/.stc"
 # Vagrant Functions
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
 alias stm='function __stm() { (cd ~/Code/stm_dev && vagrant $*); unset -f __stm; }; __stm'
+alias lamp='function __lamp() { (cd ~/Code/LAMP && vagrant $*); unset -f __lamp; }; __lamp'
 
 # Reload .zshrc
 alias zreload="source ~/.zshrc"
