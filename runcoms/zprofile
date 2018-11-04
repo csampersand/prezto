@@ -46,6 +46,7 @@ path=(
   /usr/local/{bin,sbin}
   /usr/{bin,sbin}
   /{bin,sbin}
+  /Users/chris/Library/Android/sdk/platform-tools
   $path
 )
 

@@ -24,9 +24,9 @@ alias zshconfig="$EDITOR ~/.zshrc"
 alias vimconfig="$EDITOR ~/.stc"
 
 # Vagrant Functions
-alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
-alias stm='function __stm() { (cd ~/Code/stm_dev && vagrant $*); unset -f __stm; }; __stm'
-alias lamp='function __lamp() { (cd ~/Code/LAMP && vagrant $*); unset -f __lamp; }; __lamp'
+# alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+# alias stm='function __stm() { (cd ~/Code/stm_dev && vagrant $*); unset -f __stm; }; __stm'
+alias reptilian='function __reptilian() { (cd /Users/chris/Dropbox/School/COP4600\ OS/reptilian && vagrant $*); unset -f __reptilian; }; __reptilian'
 
 # Reload .zshrc
 alias zreload="source ~/.zshrc"
@@ -52,6 +52,9 @@ alias ql='quick-look'
 alias pjs='phantomjs'
 alias tower='gittower'
 alias st='subl -n'
+alias cat='bat'
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
 
 # Enable fasd functions
 eval "$(fasd --init auto)"
